@@ -1,23 +1,37 @@
 # Dynamic Midpoint Binary Search 🚀
 
 ## Overview
-This repository presents an optimized binary search algorithm (almost 100% improvement) that dynamically adjusts the midpoint calculation based on the leftmost and rightmost values, rather than always rounding down. This approach can improve search efficiency in some cases.
 
-## Problem Statement
-Binary search is an efficient algorithm to find an element in a sorted array. The standard implementation always computes the midpoint using:
+This repo presents an approach to binary search that can short-circuit certain comparisons by dynamically adjusting the midpoint based on the target’s relationship to the boundaries (`nums[l]` and `nums[r]`).
 
-```python
-m = (l + r) // 2
-```
+## How It Works
 
-## Optimization Idea
-Instead of always computing `m` the same way, our **Dynamic Midpoint Strategy** adjusts it based on the values at the left (`nums[l]`) and right (`nums[r]`) boundaries to improve efficiency.
+1. **Check boundary conditions**:
+   - If `target < nums[l]`, set `m = l`.
+   - If `target > nums[r]`, set `m = r`.
+   - Otherwise, use the standard midpoint `(l + r) // 2`.
+2. **Compare and move the boundaries** until `l > r`.
 
-## Performance Improvement
-- **Standard Binary Search:** `238 ms`
-- **Optimized Dynamic Midpoint Search:** `3 ms`
-- **Improvement:**  **98.74% faster** on Leetcode
+By short-circuiting cases where the target is clearly out of bounds, we can reduce the search space more quickly in certain scenarios.
+
+## Complexity Analysis
+
+- **Time Complexity**: \(O(\log n)\) in the worst case, similar to standard binary search.
+- **Space Complexity**: \(O(1)\), since we perform in-place checks without extra data structures.
+
+## Performance
+
+On LeetCode, this solution:
+
+- Ran in **3 ms** vs the traditional binary search’s **238 ms** under certain test conditions.
+- Had a memory usage of **18.6 MB**
+
+Your mileage may vary based on input distribution and environment.
+
+## Contributing
+
+Feel free to open issues or submit PRs with improvements or additional test cases.
 
 ## Solution Link
-[View LeetCode Submission](https://leetcode.com/submissions/detail/1524739686/)
 
+[View LeetCode Submission](https://leetcode.com/submissions/detail/1524739686/)
