@@ -30,7 +30,7 @@ Your mileage may vary based on input distribution and environment.
 
 ## Contributing
 
-Feel free to open issues or submit PRs with improvements or additional test cases.
+Feel free to open issues or submit PRs with additional test cases.
 
 ## Solution Link
 
