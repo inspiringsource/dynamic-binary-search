@@ -34,4 +34,5 @@ Feel free to open issues or submit PRs with additional test cases.
 ## Solution Link
 
 [View LeetCode Submission version 2](https://leetcode.com/submissions/detail/1525837756/)
+
 [View LeetCode Submission version 1](https://leetcode.com/submissions/detail/1524739686/)
