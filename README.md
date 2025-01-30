@@ -4,6 +4,10 @@
 
 This repo presents an approach to binary search that can short-circuit certain comparisons by dynamically adjusting the midpoint based on the target’s relationship to the boundaries (`nums[l]` and `nums[r]`).
 
+## Work in Progress
+
+I will be adding more **benchmarking data** and **test cases** to demonstrate the performance and correctness of this solution.
+
 ## How It Works
 
 1. **Check boundary conditions**:
