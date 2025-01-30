@@ -25,12 +25,7 @@ By short-circuiting cases where the target is clearly out of bounds, we can redu
 
 ## Performance
 
-On LeetCode, this solution:
-
-- Ran in **3 ms** vs the traditional binary search’s **238 ms** under certain test conditions.
-- Had a memory usage of **18.6 MB**
-
-Your mileage may vary based on input distribution and environment.
+Work in progress.
 
 ## Contributing
 
@@ -38,4 +33,5 @@ Feel free to open issues or submit PRs with additional test cases.
 
 ## Solution Link
 
-[View LeetCode Submission](https://leetcode.com/submissions/detail/1524739686/)
+[View LeetCode Submission version 2](https://leetcode.com/submissions/detail/1525837756/)
+[View LeetCode Submission version 1](https://leetcode.com/submissions/detail/1524739686/)
