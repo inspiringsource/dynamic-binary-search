@@ -6,7 +6,7 @@ This repo presents an approach to binary search that can short-circuit certain c
 
 ## Work in Progress
 
-I will be adding more **benchmarking data** and **test cases** to demonstrate the performance and correctness of this solution.
+I will be improving the code and adding more **benchmarking data** to demonstrate the performance and correctness of this solution.
 
 ## How It Works
 
