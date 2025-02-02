@@ -2,13 +2,7 @@
 
 ## Overview
 
-This repository showcases an enhanced binary search algorithm that adjusts the midpoint based on the target’s relationship to the array boundaries (nums[l] and nums[r]). The goal is to optimize search performance by reducing unnecessary halving of the search space and short-circuiting the search when possible.
-
-## Work in Progress
-
-- **Benchmarking:** Developed comprehensive C benchmarking code (`benchmark_binary_search_large.c`) to compare the performance of the improved algorithm against the standard binary search across large datasets.
-- **C Implementation:** Transitioned the improved algorithm from Python to C to leverage compiled language performance benefits.
-- **Further Optimizations:** Exploring potential optimizations and alternative algorithms to enhance search efficiency.
+This repository showcases an enhanced binary search algorithm that adjusts the midpoint based on the target’s relationship to the array boundaries (`nums[l]` and `nums[r]`). The goal is to optimize search performance by reducing unnecessary halving of the search space and short-circuiting the search when possible. So far, the algorithm has been implemented in Python and C, with benchmarking code to compare its performance against the standard binary search algorithm. Notably, the improved algorithm beats 100% of other solutions on LeetCode—likely due to the small, specific datasets and unique distributions used for benchmarking there. However, our benchmarks on larger datasets show only marginal performance gains (around a single-digit percentage, roughly 5% at best) in specific scenarios. In most cases, the added complexity does not justify replacing the standard binary search.
 
 ## How It Works
 
@@ -60,25 +54,18 @@ This repository showcases an enhanced binary search algorithm that adjusts the m
 ### **Analysis**
 
 - **Uniform Random Distribution:**
-  - **All Dataset Sizes (100k, 1M, 10M, 50M):** Both **Improved** and **Standard Binary Searches** exhibit **identical or near-identical** performance, indicating no significant advantage in this distribution.
-
+  - Across all dataset sizes (100k, 1M, 10M, 50M), both the improved and standard binary searches exhibit nearly identical performance.
+  
 - **High Out-of-Bounds Distribution:**
-  - **100k Elements:** The **Improved Binary Search** is **slower** (0.024s vs. 0.010s) than the **Standard Binary Search**.
-  - **1M, 10M, 50M Elements:** The **Improved Binary Search** **outperforms** the **Standard Binary Search** (e.g., 0.010s vs. 0.011s at 1M elements), showcasing potential scalability benefits in handling out-of-bound targets.
-
+  - For 100k elements, the improved algorithm is slower (0.024s vs. 0.010s).
+  - For larger datasets (1M, 10M, 50M), the improved algorithm marginally outperforms the standard binary search (e.g., 0.010s vs. 0.011s at 1M elements).
+  
 - **Clustered Near Boundaries Distribution:**
-  - **All Dataset Sizes:** The **Improved Binary Search** shows **marginal improvements** or performs **on par** with the **Standard Binary Search**, but the differences are not substantial enough to be considered significant.
+  - Performance differences between the two methods are minimal and not significant enough to justify the added complexity.
 
 **Conclusion:**
 
-While the Improved Binary Search demonstrates marginal performance gains in certain scenarios—particularly with high out-of-bounds targets in larger datasets—the benefits are not substantial enough to justify the added complexity in most cases. The Standard Binary Search remains highly efficient and simpler to implement, making it the preferred choice.
-
-## Next Steps
-
-- **Implement and Benchmark in C:** Continue refining the improved algorithm and explore its performance with larger datasets (e.g., 100 million elements).
-- **Optimize the Improved Algorithm:** Reduce conditional branches, explore loop unrolling, and enhance cache locality.
-- **Compare with C's `bsearch`:** Ensure fair benchmarking and investigate why `bsearch` underperforms, adjusting the benchmark if necessary.
-- **Explore Alternative Implementations:** Consider using other programming languages or leveraging existing optimized libraries for better performance.
+The **Improved Binary Search** demonstrates marginal performance gains (up to 5% in certain scenarios with high out-of-bounds targets on large datasets), these improvements are not substantial enough to justify its added complexity in most practical cases. 
 
 ## Contributing
 
@@ -87,5 +74,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests with
 ## Solution Link
 
 - [View LeetCode Submission (C)](https://leetcode.com/problems/binary-search/submissions/1526367344)
-
 - [View LeetCode Submission (Python)](https://leetcode.com/problems/binary-search/submissions/1525837756)
