@@ -64,7 +64,7 @@ def benchmark_search(solution, dataset: List[int], iterations: int) -> float:
 
 if __name__ == '__main__':
     iterations = 10000  # Number of iterations for each benchmark
-    dataset_sizes = [65, 75, 95, 150]  # Smaller dataset sizes
+    dataset_sizes = [5, 10, 15, 20]  # Smaller dataset sizes
 
     improved = ImprovedSolution()
     standard = StandardSolution()
