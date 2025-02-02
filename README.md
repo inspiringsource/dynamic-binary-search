@@ -65,7 +65,7 @@ This repository showcases an enhanced binary search algorithm that adjusts the m
 
 **Conclusion:**
 
-The **Improved Binary Search** demonstrates marginal performance gains (up to 5% in certain scenarios with high out-of-bounds targets on large datasets), these improvements are not substantial enough to justify its added complexity in most practical cases. 
+The **Improved Binary Search** demonstrates marginal performance gains (up to 5% in certain scenarios with high out-of-bounds targets on large datasets), these improvements are not substantial enough to justify its added complexity in most practical cases.
 
 ## Contributing
 
